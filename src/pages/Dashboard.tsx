@@ -1,26 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Sidebar from "../components/Sidebar";
 import RepoCard from "../components/RepoCard";
-import { IoIosSearch } from "react-icons/io";
-import MenuItem from "../components/MenuItem";
-import RenderIcon from "../components/RenderIcon";
+import RepoListHeader from "../components/RepoListHeader";
 
 export default function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const repoMenu = [
-    {
-      id: 1,
-      icon: "refresh",
-      title: "Refresh All",
-    },
-    {
-      id: 2,
-      icon: "add",
-      title: "Add Repository",
-    },
-  ];
 
   const reposList = [
     {
@@ -67,63 +52,38 @@ export default function Dashboard() {
       id: 6,
       title: "blog-website",
       type: "Public",
-      language: "React",
-      size: 7320,
-      lastUpdated: 1,
+      language: "HTML/CSS",
+      size: 1876,
+      lastUpdated: 4,
+    },
+    {
+      id: 7,
+      title: "social-network",
+      type: "Private",
+      language: "PHP",
+      size: 5432,
+      lastUpdated: 7,
     },
   ];
 
   return (
     <>
       <main
-        className={`md:grid md:grid-cols-[1fr_6fr] h-screen md:bg-[#F5F5F5] ${
-          isOpen ? "" : ""
-        } `}
+        className={`md:grid md:grid-cols-[1fr_6fr] h-screen md:bg-[#F5F5F5] `}
       >
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-        <section className="md:m-4 md:rounded-xl md:border bg-white">
-          <header className="p-4 border-b border-[#D5D7DA] flex flex-col gap-2">
-            <div className="flex flex-col gap-2 md:flex-row md:justify-between">
-              <div className="flex flex-col gap-0.5">
-                <div className="text-2xl font-medium">Repositories</div>
-                <div className="text-sm text-[#414651]">
-                  33 total repositories
-                </div>
-              </div>
-              <div className="flex gap-2 h-fit text-sm">
-                {repoMenu.map((item) => {
-                  return (
-                    <div
-                      className={`flex gap-2 p-2 items-center border border-[#D5D7DA] rounded-md ${
-                        item.id == 2 ? "bg-[#1570EF] text-white" : ""
-                      }`}
-                    >
-                      <RenderIcon icon={item.icon} />
-                      <p>{item.title}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            <div className="flex items-center border border-[#D5D7DA] mt-2 p-1 rounded-md md:w-2/5">
-              <div className="scale-[1.5] px-2">
-                <IoIosSearch />
-              </div>
-              <input
-                type="text"
-                placeholder="Search repositories"
-                className="w-full px-2 py-1 focus:border-0 focus:outline-none"
-              />
-            </div>
-          </header>
-
+        <section className="md:m-4 md:rounded-xl md:border bg-white h-fit">
+          <RepoListHeader />
           <div className="">
-            <RepoCard />
-            <RepoCard />
-            <RepoCard />
-            <RepoCard />
-            <RepoCard />
-            <RepoCard />
+            {reposList.map((repoItem, index) => {
+              return (
+                <RepoCard
+                  key={repoItem.id}
+                  repoItem={repoItem}
+                  lastItem={reposList.length - 1 == index ? true : false}
+                />
+              );
+            })}
           </div>
         </section>
       </main>
