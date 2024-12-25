@@ -64,6 +64,14 @@ export default function Dashboard() {
       size: 5432,
       lastUpdated: 7,
     },
+    {
+      id: 8,
+      title: "component-library",
+      type: "Public",
+      language: "TypeScript",
+      size: 4570,
+      lastUpdated: 9,
+    },
   ];
 
   return (
@@ -72,7 +80,7 @@ export default function Dashboard() {
         className={`md:grid md:grid-cols-[1fr_6fr] h-screen md:bg-[#F5F5F5] `}
       >
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-        <section className="md:m-4 md:rounded-xl md:border bg-white h-fit">
+        <section className="md:m-4 md:rounded-xl md:border bg-white overflow-scroll hidden-scrollbar">
           <RepoListHeader />
           <div className="">
             {reposList.map((repoItem, index) => {
