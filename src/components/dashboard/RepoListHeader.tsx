@@ -15,18 +15,18 @@ export default function RepoListHeader() {
   ];
 
   return (
-    <header className="p-4 border-b border-[#D5D7DA] flex flex-col gap-2">
+    <header className="p-4 border-b border-borderGray flex flex-col gap-2">
       <div className="flex flex-col gap-2 md:flex-row md:justify-between">
         <div className="flex flex-col gap-0.5">
           <div className="text-2xl font-medium">Repositories</div>
-          <div className="text-sm text-[#414651]">33 total repositories</div>
+          <div className="text-sm text-altText">33 total repositories</div>
         </div>
         <div className="flex gap-2 h-fit text-sm">
           {repoMenu.map((item) => {
             return (
               <div
-                className={`flex cursor-pointer gap-2 p-2 items-center border border-[#D5D7DA] rounded-md ${
-                  item.id == 2 ? "bg-[#1570EF] text-white" : ""
+                className={`flex cursor-pointer gap-2 p-2 items-center border border-borderGray rounded-md ${
+                  item.id == 2 ? "bg-primaryBlue text-white" : ""
                 }`}
               >
                 <RenderIcon icon={item.icon} />
@@ -36,7 +36,7 @@ export default function RepoListHeader() {
           })}
         </div>
       </div>
-      <div className="flex items-center border border-[#D5D7DA] mt-2 p-0.5 rounded-md md:w-1/3">
+      <div className="flex items-center border border-borderGray mt-2 p-0.5 rounded-md md:w-1/3">
         <div className="scale-[1.5] px-2">
           <RenderIcon icon="search" />
         </div>

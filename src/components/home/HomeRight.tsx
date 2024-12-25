@@ -56,8 +56,8 @@ export default function HomeRight() {
     },
   ];
   return (
-    <div className="right bg-[#F5F5F5] flex flex-col justify-center">
-      <div className="bg-white m-6 flex flex-col justify-center items-center rounded-lg border border-[#D5D7DA]">
+    <div className="right bg-bgGray flex flex-col justify-center">
+      <div className="bg-white m-6 flex flex-col justify-center items-center rounded-lg border border-borderGray">
         <div className="flex gap-2 items-center text-2xl font-light mt-8 mb-6">
           <img src={logo} alt={"logo"} className={`w-6`} />
           <div>CodeAnt AI</div>
@@ -65,15 +65,15 @@ export default function HomeRight() {
         <div className="text-2xl md:text-3xl font-semibold mt-4">
           Welcome to CodeAnt AI
         </div>
-        <div className="flex w-[90%] rounded-md border border-[#D5D7DA] my-6">
+        <div className="flex w-[90%] rounded-md border border-borderGray my-6">
           {authOptions.map((authItem) => {
             return (
               <button
                 key={authItem.id}
                 className={`w-1/2 py-3 px-2 rounded-md text-center font-medium ${
                   authItem.id == authId
-                    ? "bg-[#1570EF] text-white"
-                    : "bg-[#FAFAFA]"
+                    ? "bg-primaryBlue text-white"
+                    : "bg-altGray"
                 }`}
                 onClick={() => {
                   setAuthId(authItem.id);
@@ -84,7 +84,7 @@ export default function HomeRight() {
             );
           })}
         </div>
-        <div className="w-full border-b border-[#D5D7DA]"></div>
+        <div className="w-full border-b border-borderGray"></div>
         <div className="fixed-height my-6 flex flex-col min-h-[220px] w-full">
           <div className="flex flex-col gap-3 items-center">
             {authOptions
@@ -92,7 +92,7 @@ export default function HomeRight() {
               .options.map((selectedOptions) => {
                 return (
                   <div
-                    className="flex items-center justify-center gap-2 py-3 border border-[#D5D7DA] rounded-lg md:w-3/5 w-4/5 cursor-pointer"
+                    className="flex items-center justify-center gap-2 py-3 border border-borderGray rounded-lg md:w-3/5 w-4/5 cursor-pointer"
                     onClick={() => {
                       navigate("/dashboard");
                     }}

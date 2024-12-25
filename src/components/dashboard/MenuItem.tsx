@@ -17,7 +17,7 @@ export default function MenuItem({
         <div
           key={item.id}
           className={`${
-            item.id == menuId ? "bg-[#1570EF] text-white" : "hover:bg-[#FAFAFA]"
+            item.id == menuId ? "bg-primaryBlue text-white" : "hover:bg-altGray"
           } p-2 mx-2 rounded-md flex items-center gap-2 cursor-pointer`}
           onClick={() => {
             if (!disablebg) {

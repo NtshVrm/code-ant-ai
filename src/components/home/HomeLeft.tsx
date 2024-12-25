@@ -31,7 +31,7 @@ export default function HomeLeft() {
 
       <div className="main-card w-[400px] shadow-custom rounded-3xl relative">
         <div>
-          <div className="flex items-center gap-4 border-b border-[#D5D7DA] py-4 px-6">
+          <div className="flex items-center gap-4 border-b border-borderGray py-4 px-6">
             {" "}
             <img src={logo} alt={"logo"} className={`w-6`} />
             <div className="font-bold">AI to Detect & Autofix Bad Code</div>
@@ -47,7 +47,7 @@ export default function HomeLeft() {
           <div className="flex justify-between items-center">
             <img src={piechart} className="w-12" />
             <div className="flex flex-col">
-              <div className="text-[#0049C6] text-xs font-semibold flex items-center gap-1">
+              <div className="text-secondaryBlue text-xs font-semibold flex items-center gap-1">
                 <RenderIcon icon="arrow-up" />
                 <div>14%</div>
               </div>

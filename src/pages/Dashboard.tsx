@@ -77,7 +77,7 @@ export default function Dashboard() {
   return (
     <>
       <main
-        className={`md:grid md:grid-cols-[1fr_6fr] h-screen md:bg-[#F5F5F5] `}
+        className={`md:grid md:grid-cols-[1fr_6fr] h-screen md:bg-bgGray `}
       >
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         <section className="md:m-4 md:rounded-xl md:border bg-white overflow-scroll hidden-scrollbar">

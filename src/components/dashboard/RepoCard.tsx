@@ -18,18 +18,18 @@ export default function RepoCard({
     <div
       className={`flex flex-col  ${
         lastItem ? "border-b" : "border-b"
-      }  border-[#D5D7DA] p-4 gap-2 hover:bg-[#FAFAFA] cursor-pointer`}
+      }  border-borderGray p-4 gap-2 hover:bg-altGray cursor-pointer`}
     >
       <div className="flex gap-2 items-center">
         <div className="font-medium ">{repoItem.title}</div>
-        <div className="bg-[#B2DDFF] border border-[#B2DDFF] py-0.5 px-2 text-sm rounded-full text-[#1570EF] bg-opacity-30">
+        <div className="bg-lightBlue border border-lightBlue py-0.5 px-2 text-sm rounded-full text-primaryBlue bg-opacity-30">
           {repoItem.type}
         </div>
       </div>
-      <div className="flex gap-6 text-[#414651] text-sm">
+      <div className="flex gap-6 text-altText text-sm">
         <div className="flex items-center gap-2">
           <div>{repoItem.language}</div>{" "}
-          <div className="w-2 h-2 bg-[#1570EF] rounded-full"></div>{" "}
+          <div className="w-2 h-2 bg-primaryBlue rounded-full"></div>{" "}
         </div>
         <div className="flex items-center gap-2">
           <RenderIcon icon="storage" />

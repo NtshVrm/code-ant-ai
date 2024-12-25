@@ -53,10 +53,10 @@ export default function Sidebar({
   ];
 
   return (
-    <div className="flex flex-col border-r border-[#D5D7DA] bg-white">
+    <div className="flex flex-col border-r border-borderGray bg-white">
       <header
         className={`flex justify-between items-center p-4 
-          border-b border-[#D5D7DA]
+          border-b border-borderGray
           md:border-none`}
       >
         <div className="flex gap-2 items-center text-xl cursor-pointer">
