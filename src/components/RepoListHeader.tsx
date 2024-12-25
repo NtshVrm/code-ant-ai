@@ -1,4 +1,3 @@
-import { IoIosSearch } from "react-icons/io";
 import RenderIcon from "./RenderIcon";
 
 export default function RepoListHeader() {
