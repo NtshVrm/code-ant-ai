@@ -1,5 +1,5 @@
 import { GiHamburgerMenu } from "react-icons/gi";
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 import { MdClose } from "react-icons/md";
 import MenuItem from "./MenuItem";
 import { IoChevronDownOutline } from "react-icons/io5";
@@ -59,7 +59,7 @@ export default function Sidebar({
           border-b border-[#D5D7DA]
           md:border-none`}
       >
-        <div className="flex gap-2 items-center text-xl">
+        <div className="flex gap-2 items-center text-xl cursor-pointer">
           <img src={logo} alt={"logo"} className={`w-6`} />
           <div>CodeAnt AI</div>
         </div>

@@ -1,4 +1,4 @@
-import RenderIcon from "./RenderIcon";
+import RenderIcon from "../RenderIcon";
 
 export default function RepoListHeader() {
   const repoMenu = [

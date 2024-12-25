@@ -1,5 +1,5 @@
 import { useState } from "react";
-import RenderIcon from "./RenderIcon";
+import RenderIcon from "../RenderIcon";
 import { useNavigate } from "react-router-dom";
 
 export default function MenuItem({

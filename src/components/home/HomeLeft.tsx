@@ -1,6 +1,6 @@
 import logo from "../../assets/logo.svg";
 import piechart from "../../assets/piechart.svg";
-import FeatureItem from "../../components/FeatureItem";
+import FeatureItem from "./FeatureItem";
 import RenderIcon from "../../components/RenderIcon";
 
 export default function HomeLeft() {
@@ -26,7 +26,7 @@ export default function HomeLeft() {
       <img
         src={logo}
         alt={"logo"}
-        className={`absolute -left-4 bottom-0 w-[300px] aspect-square opacity-30`}
+        className={`absolute -left-4 bottom-0 w-[300px] aspect-square opacity-30 cursor-pointer`}
       />
 
       <div className="main-card w-[400px] shadow-custom rounded-3xl relative">

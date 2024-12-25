@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Sidebar from "../components/Sidebar";
-import RepoCard from "../components/RepoCard";
-import RepoListHeader from "../components/RepoListHeader";
+import Sidebar from "../components/dashboard/Sidebar";
+import RepoCard from "../components/dashboard/RepoCard";
+import RepoListHeader from "../components/dashboard/RepoListHeader";
 
 export default function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);

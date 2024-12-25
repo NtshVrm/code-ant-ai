@@ -1,4 +1,4 @@
-import { GrStorage } from "react-icons/gr";
+import RenderIcon from "../RenderIcon";
 
 export default function RepoCard({
   repoItem,
@@ -32,7 +32,7 @@ export default function RepoCard({
           <div className="w-2 h-2 bg-[#1570EF] rounded-full"></div>{" "}
         </div>
         <div className="flex items-center gap-2">
-          <GrStorage />
+          <RenderIcon icon="storage" />
           <p className="truncate">{repoItem.size} KB</p>{" "}
         </div>
         <div className="truncate">

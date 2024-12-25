@@ -10,6 +10,7 @@ import { LuBookText, LuRefreshCw } from "react-icons/lu";
 import { GoGear } from "react-icons/go";
 import { FiPlus } from "react-icons/fi";
 import { IoIosSearch } from "react-icons/io";
+import { GrStorage } from "react-icons/gr";
 
 export default function RenderIcon({ icon }: { icon: string }) {
   switch (icon) {
@@ -35,5 +36,7 @@ export default function RenderIcon({ icon }: { icon: string }) {
       return <IoIosSearch />;
     case "arrow-up":
       return <IoArrowUpOutline />;
+    case "storage":
+      return <GrStorage />
   }
 }
