@@ -54,7 +54,11 @@ export default function Sidebar({
 
   return (
     <div className="flex flex-col border-r border-[#D5D7DA] bg-white">
-      <header className="flex justify-between p-4">
+      <header
+        className={`flex justify-between items-center p-4 
+          border-b border-[#D5D7DA]
+          md:border-none`}
+      >
         <div className="flex gap-2 items-center text-xl">
           <img src={logo} alt={"logo"} className={`w-6`} />
           <div>CodeAnt AI</div>
@@ -65,7 +69,9 @@ export default function Sidebar({
             setIsOpen(!isOpen);
           }}
         >
-          {isOpen ? <MdClose /> : <GiHamburgerMenu />}
+          <div className="scale-[1.5]">
+            {isOpen ? <MdClose /> : <GiHamburgerMenu />}
+          </div>
         </div>
       </header>
       <aside
@@ -73,7 +79,7 @@ export default function Sidebar({
           isOpen ? "translate-y-12" : "-translate-y-full md:translate-y-0"
         }`}
       >
-        <div className="py-2 px-4 bg-white">
+        <div className="py-4 px-4 bg-white">
           <div className="relative">
             <select className="w-full border rounded p-2 pr-8 text-ellipsis overflow-hidden appearance-none focus:outline-none">
               <option>Max Emilian Verstappen</option>
@@ -85,10 +91,10 @@ export default function Sidebar({
           </div>
         </div>
         <nav className="flex flex-col md:justify-between flex-grow ">
-          <div className="flex flex-col gap-2 bg-white">
+          <div className="flex flex-col gap-1 bg-white">
             <MenuItem menu={primaryMenu} />
           </div>
-          <div className="bg-white">
+          <div className="flex flex-col gap-1 bg-white">
             <MenuItem menu={secondaryMenu} disablebg={true} />
           </div>
         </nav>
