@@ -1,5 +1,6 @@
 import { useState } from "react";
 import RenderIcon from "./RenderIcon";
+import { useNavigate } from "react-router-dom";
 
 export default function MenuItem({
   menu,
@@ -9,6 +10,7 @@ export default function MenuItem({
   disablebg?: boolean;
 }) {
   const [menuId, setMenuId] = useState(1);
+  const navigate = useNavigate();
   return (
     <>
       {menu.map((item) => (
@@ -16,9 +18,14 @@ export default function MenuItem({
           key={item.id}
           className={`${
             item.id == menuId ? "bg-[#1570EF] text-white" : "hover:bg-[#FAFAFA]"
-          } p-2 mx-2 rounded-md flex items-center gap-2 cursor-pointer `}
+          } p-2 mx-2 rounded-md flex items-center gap-2 cursor-pointer`}
           onClick={() => {
-            !disablebg ? setMenuId(item.id) : "";
+            if (!disablebg) {
+              setMenuId(item.id);
+            }
+            if (item.title == "Logout") {
+              navigate("/");
+            }
           }}
         >
           <RenderIcon icon={item.icon} />
