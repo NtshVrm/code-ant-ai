@@ -5,7 +5,11 @@ export default {
     // screens: {
     //   'mobile': '400px',
     // },
-    extend: {},
+    extend: {
+      boxShadow: {
+        custom: "0 0 24px 0 rgba(8, 23, 53, 0.16)",
+      },
+    },
   },
   plugins: [],
 };
