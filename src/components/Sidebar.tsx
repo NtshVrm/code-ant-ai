@@ -1,4 +1,9 @@
+import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "../assets/logo.svg";
+import { MdClose } from "react-icons/md";
+import MenuItem from "./MenuItem";
+import { IoChevronDownOutline } from "react-icons/io5";
+
 export default function Sidebar({
   isOpen,
   setIsOpen,
@@ -6,6 +11,47 @@ export default function Sidebar({
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }) {
+  const primaryMenu = [
+    {
+      id: 1,
+      icon: "home",
+      title: "Repositories",
+    },
+    {
+      id: 2,
+      icon: "code",
+      title: "AI Code Review",
+    },
+    {
+      id: 3,
+      icon: "cloud",
+      title: "Cloud Security",
+    },
+    {
+      id: 4,
+      icon: "docs",
+      title: "How to Use",
+    },
+    {
+      id: 5,
+      icon: "settings",
+      title: "Settings",
+    },
+  ];
+
+  const secondaryMenu = [
+    {
+      id: 6,
+      icon: "call",
+      title: "Support",
+    },
+    {
+      id: 7,
+      icon: "logout",
+      title: "Logout",
+    },
+  ];
+
   return (
     <div className="flex flex-col border-r border-[#D5D7DA] bg-white">
       <header className="flex justify-between p-4">
@@ -19,7 +65,7 @@ export default function Sidebar({
             setIsOpen(!isOpen);
           }}
         >
-          close
+          {isOpen ? <MdClose /> : <GiHamburgerMenu />}
         </div>
       </header>
       <aside
@@ -29,28 +75,21 @@ export default function Sidebar({
       >
         <div className="py-2 px-4 bg-white">
           <div className="relative">
-            <select className="w-full border rounded p-2 pr-8 text-ellipsis overflow-hidden appearance-none">
-              <option>UtkarshDhairyaPanwar</option>
-              <option>Another User</option>
+            <select className="w-full border rounded p-2 pr-8 text-ellipsis overflow-hidden appearance-none focus:outline-none">
+              <option>Max Emilian Verstappen</option>
+              <option>Monica Konduru</option>
             </select>
             <span className="absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none">
-              ▼
+              <IoChevronDownOutline />
             </span>
           </div>
         </div>
-        <nav className="flex flex-col md:justify-between flex-grow bg-white">
-          <div className="flex flex-col gap-2">
-            <p className="bg-[#1570EF] p-2 m-2 rounded-md text-white">
-              Repositories
-            </p>
-            <p>AI Code Review</p>
-            <p>Cloud Security</p>
-            <p>How to Use</p>
-            <p>Settings</p>
+        <nav className="flex flex-col md:justify-between flex-grow ">
+          <div className="flex flex-col gap-2 bg-white">
+            <MenuItem menu={primaryMenu} />
           </div>
-          <div>
-            <p>Support</p>
-            <p>Logout</p>
+          <div className="bg-white">
+            <MenuItem menu={secondaryMenu} disablebg={true} />
           </div>
         </nav>
       </aside>
