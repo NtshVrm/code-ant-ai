@@ -1,8 +1,9 @@
-import { MdLogout } from "react-icons/md";
+import { MdClose, MdLogout } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
 import {
   IoArrowUpOutline,
   IoCallOutline,
+  IoChevronDownOutline,
   IoCloudOutline,
   IoCodeSlashOutline,
 } from "react-icons/io5";
@@ -11,6 +12,7 @@ import { GoGear } from "react-icons/go";
 import { FiPlus } from "react-icons/fi";
 import { IoIosSearch } from "react-icons/io";
 import { GrStorage } from "react-icons/gr";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function RenderIcon({ icon }: { icon: string }) {
   switch (icon) {
@@ -36,7 +38,13 @@ export default function RenderIcon({ icon }: { icon: string }) {
       return <IoIosSearch />;
     case "arrow-up":
       return <IoArrowUpOutline />;
+    case "chevron-down":
+      return <IoChevronDownOutline />;
     case "storage":
-      return <GrStorage />
+      return <GrStorage />;
+    case "close":
+      return <MdClose />;
+    case "hamburger":
+      return <GiHamburgerMenu />;
   }
 }

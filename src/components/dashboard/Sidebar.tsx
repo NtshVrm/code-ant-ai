@@ -1,8 +1,6 @@
-import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "../../assets/logo.svg";
-import { MdClose } from "react-icons/md";
 import MenuItem from "./MenuItem";
-import { IoChevronDownOutline } from "react-icons/io5";
+import RenderIcon from "../RenderIcon";
 
 export default function Sidebar({
   isOpen,
@@ -70,12 +68,16 @@ export default function Sidebar({
           }}
         >
           <div className="scale-[1.5]">
-            {isOpen ? <MdClose /> : <GiHamburgerMenu />}
+            {isOpen ? (
+              <RenderIcon icon="close" />
+            ) : (
+              <RenderIcon icon="hamburger" />
+            )}
           </div>
         </div>
       </header>
       <aside
-        className={`flex-grow flex flex-col absolute w-full top-0 left-0 z-50 transition-transform md:relative md:bg-white h-full bg-black bg-opacity-50 ${
+        className={`flex-grow flex flex-col absolute w-full top-0 left-0 z-50 transition-transform duration-300 md:relative md:bg-white h-full bg-black bg-opacity-50 ${
           isOpen ? "translate-y-14" : "-translate-y-full md:translate-y-0"
         }`}
       >
@@ -86,7 +88,7 @@ export default function Sidebar({
               <option>Monica Konduru</option>
             </select>
             <span className="absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none">
-              <IoChevronDownOutline />
+              <RenderIcon icon="chevron-down" />
             </span>
           </div>
         </div>
