@@ -18,7 +18,7 @@ export default function MenuItem({
           key={item.id}
           className={`${
             item.id == menuId ? "bg-primaryBlue text-white" : "hover:bg-altGray"
-          } p-2 mx-2 rounded-md flex items-center gap-2 cursor-pointer`}
+          } p-2 mx-2 rounded-md flex items-center gap-2 cursor-pointer font-semibold`}
           onClick={() => {
             if (!disablebg) {
               setMenuId(item.id);
