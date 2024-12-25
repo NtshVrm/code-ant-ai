@@ -26,7 +26,7 @@ export default function RepoListHeader() {
           {repoMenu.map((item) => {
             return (
               <div
-                className={`flex gap-2 p-2 items-center border border-[#D5D7DA] rounded-md ${
+                className={`flex cursor-pointer gap-2 p-2 items-center border border-[#D5D7DA] rounded-md ${
                   item.id == 2 ? "bg-[#1570EF] text-white" : ""
                 }`}
               >

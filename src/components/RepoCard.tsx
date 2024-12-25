@@ -17,7 +17,7 @@ export default function RepoCard({
   return (
     <div
       className={`flex flex-col  ${
-        lastItem ? "" : "border-b"
+        lastItem ? "border-b" : "border-b"
       }  border-[#D5D7DA] p-4 gap-2 hover:bg-[#FAFAFA] cursor-pointer`}
     >
       <div className="flex gap-2 items-center">
@@ -26,16 +26,16 @@ export default function RepoCard({
           {repoItem.type}
         </div>
       </div>
-      <div className="flex gap-8 text-[#414651] text-sm">
+      <div className="flex gap-6 text-[#414651] text-sm">
         <div className="flex items-center gap-2">
           <div>{repoItem.language}</div>{" "}
           <div className="w-2 h-2 bg-[#1570EF] rounded-full"></div>{" "}
         </div>
         <div className="flex items-center gap-2">
           <GrStorage />
-          <p>{repoItem.size} KB</p>{" "}
+          <p className="truncate">{repoItem.size} KB</p>{" "}
         </div>
-        <div>
+        <div className="truncate">
           Updated {repoItem.lastUpdated}{" "}
           {repoItem.lastUpdated > 1 ? "days" : "day"} ago
         </div>

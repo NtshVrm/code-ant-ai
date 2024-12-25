@@ -76,7 +76,7 @@ export default function Sidebar({
       </header>
       <aside
         className={`flex-grow flex flex-col absolute w-full top-0 left-0 z-50 transition-transform md:relative md:bg-white h-full bg-black bg-opacity-50 ${
-          isOpen ? "translate-y-12" : "-translate-y-full md:translate-y-0"
+          isOpen ? "translate-y-14" : "-translate-y-full md:translate-y-0"
         }`}
       >
         <div className="py-4 px-4 bg-white">

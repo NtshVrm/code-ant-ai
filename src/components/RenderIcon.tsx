@@ -1,6 +1,7 @@
 import { MdLogout } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
 import {
+  IoArrowUpOutline,
   IoCallOutline,
   IoCloudOutline,
   IoCodeSlashOutline,
@@ -32,5 +33,7 @@ export default function RenderIcon({ icon }: { icon: string }) {
       return <FiPlus />;
     case "search":
       return <IoIosSearch />;
+    case "arrow-up":
+      return <IoArrowUpOutline />;
   }
 }
