@@ -8,6 +8,7 @@ import {
 import { LuBookText, LuRefreshCw } from "react-icons/lu";
 import { GoGear } from "react-icons/go";
 import { FiPlus } from "react-icons/fi";
+import { IoIosSearch } from "react-icons/io";
 
 export default function RenderIcon({ icon }: { icon: string }) {
   switch (icon) {
@@ -26,8 +27,10 @@ export default function RenderIcon({ icon }: { icon: string }) {
     case "logout":
       return <MdLogout />;
     case "refresh":
-        return <LuRefreshCw />;
+      return <LuRefreshCw />;
     case "add":
-        return <FiPlus />;
+      return <FiPlus />;
+    case "search":
+      return <IoIosSearch />;
   }
 }
