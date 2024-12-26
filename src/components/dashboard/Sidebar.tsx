@@ -1,14 +1,11 @@
 import logo from "../../assets/logo.svg";
 import MenuItem from "./MenuItem";
 import RenderIcon from "../RenderIcon";
+import { useState } from "react";
 
-export default function Sidebar({
-  isOpen,
-  setIsOpen,
-}: {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
-}) {
+export default function Sidebar() {
+
+  const [isOpen, setIsOpen] = useState(false);
   const primaryMenu = [
     {
       id: 1,

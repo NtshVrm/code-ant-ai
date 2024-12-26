@@ -5,8 +5,6 @@ import RepoCard from "../components/dashboard/RepoCard";
 import RepoListHeader from "../components/dashboard/RepoListHeader";
 
 export default function Dashboard() {
-  const [isOpen, setIsOpen] = useState(false);
-
   const reposList = [
     {
       id: 1,
@@ -76,10 +74,8 @@ export default function Dashboard() {
 
   return (
     <>
-      <main
-        className={`md:grid md:grid-cols-[1fr_6fr] h-screen md:bg-bgGray `}
-      >
-        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+      <main className={`md:grid md:grid-cols-[1fr_6fr] h-screen md:bg-bgGray `}>
+        <Sidebar />
         <section className="md:m-4 md:rounded-xl md:border bg-white overflow-scroll hidden-scrollbar">
           <RepoListHeader />
           <div className="">
